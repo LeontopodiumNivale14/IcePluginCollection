@@ -11,19 +11,14 @@ global using Dalamud.Plugin;
 global using ECommons.DalamudServices;
 global using ECommons.ImGuiMethods;
 global using ECommons;
-global using ImGuiNET;
+global using Dalamud.Bindings.ImGui;
 global using System.Linq;
 global using System.Numerics;
 global using System;
 global using static ECommons.GenericHelpers;
 
-global using static ExplorersIcebox.IcePluginCollection;
-global using static ExplorersIcebox.Util.Utils;
+global using static ExplorersIcebox.ExplorersIcebox;
 
-// tables being used acrossed the plugin
-global using static ExplorersIcebox.Util.IslandData;
-global using static ExplorersIcebox.Util.IslandNavmeshWP;
 global using static ExplorersIcebox.Util.VislandRoutes;
-global using static ExplorersIcebox.Util.IslandUiWindows;
 global using Dalamud.Plugin.Services;
 

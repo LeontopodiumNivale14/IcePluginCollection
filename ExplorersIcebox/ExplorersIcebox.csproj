@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Dalamud.NET.Sdk/13.0.0">
+
+  <PropertyGroup>
+    <Version>1.0.4.5</Version>
+    <Description>Pop open a cold one while the tedious parts of exploration is handled by your good friend cousin robby.</Description>
+    <PackageProjectUrl>https://github.com/goatcorp/ExplorersIcebox</PackageProjectUrl>
+    <PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
+    <IsPackable>true</IsPackable>
+    <RootNamespace>ExplorersIcebox</RootNamespace>
+    <TargetFramework>net9.0-windows7.0</TargetFramework>
+    <NoWarn>CS8618; CS8625; CS8629; </NoWarn>
+  </PropertyGroup>
+
+    <ItemGroup>
+        <Content Include="ExplorersIcebox.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="YamlDotNet" Version="16.3.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\ECommons\ECommons\ECommons.csproj" />
+        <ProjectReference Include="..\ffxiv_pictomancy\Pictomancy\Pictomancy.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="Routes\CustomRoutes.yaml" />
+    </ItemGroup>
+    
+</Project>
