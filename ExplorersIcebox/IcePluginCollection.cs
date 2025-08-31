@@ -7,10 +7,10 @@ using ExplorersIcebox.Ui.MainWindow;
 
 namespace ExplorersIcebox;
 
-public sealed class ExplorersIcebox : IDalamudPlugin
+public sealed class IcePluginCollection : IDalamudPlugin
 {
     public string Name => "ExplorersIcebox";
-    internal static ExplorersIcebox P = null!;
+    internal static IcePluginCollection P = null!;
     public static Config C => P.config;
     private Config config;
 
@@ -26,7 +26,7 @@ public sealed class ExplorersIcebox : IDalamudPlugin
     internal NavmeshIPC navmesh;
     internal VislandIPC visland;
 
-    public ExplorersIcebox(IDalamudPluginInterface pi)
+    public IcePluginCollection(IDalamudPluginInterface pi)
     {
         //Test.(
         P = this;

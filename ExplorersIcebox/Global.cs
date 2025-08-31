@@ -17,7 +17,7 @@ global using System.Numerics;
 global using System;
 global using static ECommons.GenericHelpers;
 
-global using static ExplorersIcebox.ExplorersIcebox;
+global using static ExplorersIcebox.IcePluginCollection;
 global using static ExplorersIcebox.Util.Utils;
 
 // tables being used acrossed the plugin
