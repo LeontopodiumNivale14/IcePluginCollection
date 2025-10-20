@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Dalamud.NET.Sdk/13.0.0">
+
+  <PropertyGroup>
+    <Version>1.0.4.5</Version>
+    <Description>Pop open a cold one while the tedious parts of exploration is handled by your good friend cousin robby.</Description>
+    <PackageProjectUrl>https://github.com/goatcorp/ExplorersIcebox</PackageProjectUrl>
+    <PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
+    <IsPackable>true</IsPackable>
+    <RootNamespace>IcePluginCollection</RootNamespace>
+    <TargetFramework>net9.0-windows7.0</TargetFramework>
+    <NoWarn>CS8618; CS8625; CS8629; </NoWarn>
+  </PropertyGroup>
+
+    <ItemGroup>
+        <Content Include="IceBoxofeXtras.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="ECommons" Version="3.0.1.20" />
+        <PackageReference Include="Pictomancy" Version="0.0.1" />
+        <PackageReference Include="YamlDotNet" Version="16.3.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="Routes\CustomRoutes.yaml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Ui\MainWindow\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="Resources\deepDungeonMobDatabase.csv" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Update="DalamudPackager" Version="13.1.0" />
+      <PackageReference Update="DotNet.ReproducibleBuilds" Version="1.2.39" />
+    </ItemGroup>
+    
+</Project>

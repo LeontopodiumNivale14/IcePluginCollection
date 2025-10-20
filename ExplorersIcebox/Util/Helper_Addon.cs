@@ -8,14 +8,13 @@ using System.Threading.Tasks;
 
 namespace ExplorersIcebox.Util;
 
-public static class AddonHelper
+public static class Helper_Addon
 {
     public static unsafe bool IsAddonActive(string AddonName) // Used to see if the addon is active/ready to be fired on
     {
         var addon = RaptureAtkUnitManager.Instance()->GetAddonByName(AddonName);
         return addon != null && addon->IsVisible && addon->IsReady;
     }
-
     public static unsafe bool IsNodeVisible(string addonName, params int[] ids)
     {
         var ptr = Svc.GameGui.GetAddonByName(addonName, 1);
@@ -26,7 +25,6 @@ public static class AddonHelper
         var node = GetNodeByIDChain(addon->GetRootNode(), ids);
         return node != null && node->IsVisible();
     }
-
     public static unsafe string GetNodeText(string addonName, params int[] nodeNumbers)
     {
 
@@ -88,7 +86,6 @@ public static class AddonHelper
         var textNode = (AtkTextNode*)node;
         return textNode;
     }
-
     private static unsafe AtkResNode* GetNodeByIDChain(AtkResNode* node, params int[] ids)
     {
         if (node == null || ids.Length <= 0)

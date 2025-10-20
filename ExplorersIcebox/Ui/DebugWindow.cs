@@ -1,9 +1,4 @@
-using ExplorersIcebox.Ui.DebugWindowTabs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ExplorersIcebox.Ui;
 
@@ -60,17 +55,6 @@ internal class DebugWindow : Window
         {
             switch (selectedDebugIndex)
             {
-                case 0: PlayerInfoDebug.Draw(); break;
-                case 1: ImGui.Text("Need to fix navmesh info"); break;
-                case 2: MiscInfoDebug.Draw(); break;
-                case 3: RouteSellDebug.Draw(); break;
-                case 4: TargetInfoDebug.Draw(); break;
-                case 5: TestGuiDebug.Draw(); EcomsTestingDebug.Draw(); break;
-                case 6: IslandGatherPointData.GatherPointDataDraw(); break;
-                case 7: IslandItemInfoDebug.Draw(); break;
-                case 8: RouteEditorV4Debug.Draw(); break;
-                case 9: BaseRouteEditor.Draw(); break;
-                case 10: PictoTestDebug.Draw(); break;
                 default: ImGui.Text("Unknown Debug View"); break;
             }
 

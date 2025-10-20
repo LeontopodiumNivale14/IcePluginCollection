@@ -9,19 +9,12 @@ using Pictomancy;
 
 namespace ExplorersIcebox;
 
-public sealed class ExplorersIcebox : IDalamudPlugin
+public sealed class MiniPluginCollection : IDalamudPlugin
 {
-    public string Name => "ExplorersIcebox";
+    public string Name => "MiniPluginCollection";
 
     private static GeneralConfig? Config;
-    private static GatherRoutes? GatherRoutesConfig;
-
-    // Lazy-loaded static config accessor
     public static GeneralConfig C => Config ??= LoadConfig<GeneralConfig>();
-    public static GatherRoutes G => GatherRoutesConfig ??= LoadConfig<GatherRoutes>();
-
-    public static GatherRoutes EmbedRoutes => embeddedRoutes ??= LoadEmbeddedConfig<GatherRoutes>("ExplorersIcebox.Routes.CustomRoutes.yaml");
-    private static GatherRoutes? embeddedRoutes;
 
     private static T LoadConfig<T>() where T : IYamlConfig, new()
     {
@@ -30,32 +23,16 @@ public sealed class ExplorersIcebox : IDalamudPlugin
 
         if (config == null)
         {
-            PluginLog.Warning($"[{typeof(T).Name}] Config was null. Creating new default.");
+            // PluginLog.Warning($"[{typeof(T).Name}] Config was null. Creating new default.");
             config = new T();
             YamlConfig.Save(config, path);
         }
 
-        PluginLog.Information($"[{typeof(T).Name}] Loaded from {path}");
+        // PluginLog.Information($"[{typeof(T).Name}] Loaded from {path}");
         return config;
     }
 
-    private static T LoadEmbeddedConfig<T>(string resourceName) where T : IYamlConfig, new()
-    {
-        var config = YamlConfig.LoadFromResource<T>(resourceName);
-
-        if (config == null)
-        {
-            PluginLog.Warning($"[{typeof(T).Name}] Embedded config was null. Returning new default.");
-            config = new T();
-        }
-
-        PluginLog.Information($"[{typeof(T).Name}] Loaded from embedded resource: {resourceName}");
-        return config;
-    }
-
-
-
-    internal static ExplorersIcebox P = null!;
+    internal static MiniPluginCollection P = null!;
 
     // Window Systems for the plugin (nice and neatly)
     internal WindowSystem windowSystem;
@@ -69,11 +46,10 @@ public sealed class ExplorersIcebox : IDalamudPlugin
     internal LifestreamIPC lifestream;
     internal NavmeshIPC navmesh;
 
-    public ExplorersIcebox(IDalamudPluginInterface pi)
+    public MiniPluginCollection(IDalamudPluginInterface pi)
     {
         P = this;
         ECommonsMain.Init(pi, P, ECommons.Module.DalamudReflector, ECommons.Module.ObjectFunctions, Module.SplatoonAPI);
-        Util.File_Migration.UpdateItemConfig();
 
         PictoService.Initialize(pi);
 
@@ -98,12 +74,11 @@ public sealed class ExplorersIcebox : IDalamudPlugin
             
         }; 
         */
-        EzCmd.Add("/explorersicebox", OnCommand, """
+        EzCmd.Add("/IcesPluginCollection", OnCommand, """
             Open plugin interface
-            /icebox - alias for /explorersicebox
-            /explorersicebox s|settings - Opens the workshop menu
+            /ipc - alias for plugin
             """);
-        EzCmd.Add("/icebox", OnCommand);
+        EzCmd.Add("/ipc", OnCommand);
 
         taskManager = new(new(abortOnTimeout: true, timeLimitMS: 20000, showDebug: true));
 

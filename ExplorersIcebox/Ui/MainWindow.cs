@@ -1,11 +1,9 @@
-
-
-namespace ExplorersIcebox.Ui.MainWindow;
+namespace IceBoxofeXtras.Ui;
 
 internal class MainWindow : Window
 {
     public MainWindow() :
-        base($"Explorer's Icebox {P.GetType().Assembly.GetName().Version} ###Explorer'sIceboxMainWindow")
+        base($"Ice's Plugin Collection {P.GetType().Assembly.GetName().Version} ###IPC_MainWindow")
     {
         Flags = ImGuiWindowFlags.None;
         SizeConstraints = new()
@@ -14,13 +12,13 @@ internal class MainWindow : Window
             MaximumSize = new Vector2(2000, 2000)
         };
         P.windowSystem.AddWindow(this);
-        AllowPinning = false;
+        AllowPinning = true;
     }
 
     public void Dispose() { }
 
     public override void Draw()
     {
-
+      
     }
 }

@@ -17,8 +17,7 @@ global using System.Numerics;
 global using System;
 global using static ECommons.GenericHelpers;
 
-global using static ExplorersIcebox.ExplorersIcebox;
+global using static ExplorersIcebox.MiniPluginCollection;
 
-global using static ExplorersIcebox.Util.VislandRoutes;
 global using Dalamud.Plugin.Services;
 
