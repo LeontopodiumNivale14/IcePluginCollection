@@ -1,6 +1,6 @@
 
 
-namespace ExplorersIcebox.Ui;
+namespace MiniPluginCollection.Ui;
 
 internal class DebugWindow : Window
 {

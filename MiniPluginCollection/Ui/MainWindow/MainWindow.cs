@@ -1,6 +1,6 @@
 
 
-namespace ExplorersIcebox.Ui.MainWindow;
+namespace MiniPluginCollection.Ui.MainWindow;
 
 internal class MainWindow : Window
 {

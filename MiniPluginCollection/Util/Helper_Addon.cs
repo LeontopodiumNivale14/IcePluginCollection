@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExplorersIcebox.Util;
+namespace MiniPluginCollection.Util;
 
 public static class Helper_Addon
 {

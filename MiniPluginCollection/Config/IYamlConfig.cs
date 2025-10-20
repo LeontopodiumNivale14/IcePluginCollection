@@ -1,4 +1,4 @@
-namespace ExplorersIcebox.Config;
+namespace MiniPluginCollection.Config;
 
 public interface IYamlConfig
 {

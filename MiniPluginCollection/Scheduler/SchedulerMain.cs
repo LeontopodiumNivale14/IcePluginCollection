@@ -1,7 +1,7 @@
-using ExplorersIcebox.Enums;
-using static ExplorersIcebox.Enums.IceBoxState;
+using MiniPluginCollection.Enums;
+using static MiniPluginCollection.Enums.IceBoxState;
 
-namespace ExplorersIcebox.Scheduler
+namespace MiniPluginCollection.Scheduler
 {
     internal static unsafe class SchedulerMain
     {

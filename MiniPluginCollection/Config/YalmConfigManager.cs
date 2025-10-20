@@ -34,21 +34,4 @@ public static class YamlConfig
         Directory.CreateDirectory(Path.GetDirectoryName(path)!);
         File.WriteAllText(path, yaml);
     }
-
-    public static T LoadFromResource<T>(string resourceName) where T : new()
-    {
-        var assembly = Assembly.GetExecutingAssembly();
-
-        using Stream? stream = assembly.GetManifestResourceStream(resourceName);
-        if (stream == null)
-        {
-            PluginLog.Warning($"Could not find embedded resource: {resourceName}");
-            return new T();
-        }
-
-        using var reader = new StreamReader(stream);
-        var yaml = reader.ReadToEnd();
-
-        return Deserializer.Deserialize<T>(yaml) ?? new T();
-    }
 }

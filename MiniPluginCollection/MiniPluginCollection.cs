@@ -1,20 +1,20 @@
 using ECommons.Automation.NeoTaskManager;
 using ECommons.Logging;
-using ExplorersIcebox.Config;
-using ExplorersIcebox.IPC;
-using ExplorersIcebox.Scheduler;
-using ExplorersIcebox.Ui;
-using ExplorersIcebox.Ui.MainWindow;
+using MiniPluginCollection.Config;
+using MiniPluginCollection.IPC;
+using MiniPluginCollection.Scheduler;
+using MiniPluginCollection.Ui;
+using MiniPluginCollection.Ui.MainWindow;
 using Pictomancy;
 
-namespace ExplorersIcebox;
+namespace MiniPluginCollection;
 
 public sealed class MiniPluginCollection : IDalamudPlugin
 {
     public string Name => "MiniPluginCollection";
 
-    private static GeneralConfig? Config;
-    public static GeneralConfig C => Config ??= LoadConfig<GeneralConfig>();
+    private static PluginConfig? Config;
+    public static PluginConfig C => Config ??= LoadConfig<PluginConfig>();
 
     private static T LoadConfig<T>() where T : IYamlConfig, new()
     {

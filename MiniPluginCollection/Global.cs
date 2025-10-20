@@ -17,7 +17,7 @@ global using System.Numerics;
 global using System;
 global using static ECommons.GenericHelpers;
 
-global using static ExplorersIcebox.MiniPluginCollection;
+global using static MiniPluginCollection.MiniPluginCollection;
 
 global using Dalamud.Plugin.Services;
 

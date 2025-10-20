@@ -1,12 +1,12 @@
 using ECommons.EzIpcManager;
-using ExplorersIcebox.Util;
+using MiniPluginCollection.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExplorersIcebox.IPC;
+namespace MiniPluginCollection.IPC;
 
 #nullable disable
 public class NavmeshIPC

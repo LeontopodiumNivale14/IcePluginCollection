@@ -15,7 +15,10 @@ internal class MainWindow : Window
         AllowPinning = true;
     }
 
-    public void Dispose() { }
+    public void Dispose() 
+    { 
+        P.windowSystem.RemoveWindow(this); 
+    }
 
     public override void Draw()
     {

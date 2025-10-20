@@ -2,12 +2,12 @@
 <Project Sdk="Dalamud.NET.Sdk/13.0.0">
 
   <PropertyGroup>
-    <Version>1.0.4.5</Version>
-    <Description>Pop open a cold one while the tedious parts of exploration is handled by your good friend cousin robby.</Description>
+    <Version>0.0.0.1</Version>
+    <Description>Just a little colleciton of plugins that I don't deem necessary to make into it's own big thing</Description>
     <PackageProjectUrl>https://github.com/goatcorp/ExplorersIcebox</PackageProjectUrl>
     <PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
     <IsPackable>true</IsPackable>
-    <RootNamespace>ExplorersIcebox</RootNamespace>
+    <RootNamespace>MiniPluginCollection</RootNamespace>
     <TargetFramework>net9.0-windows7.0</TargetFramework>
     <NoWarn>CS8618; CS8625; CS8629; </NoWarn>
   </PropertyGroup>
@@ -25,7 +25,6 @@
     <ItemGroup>
       <Folder Include="Routes\" />
       <Folder Include="Scheduler\Handers\" />
-      <Folder Include="Scheduler\Tasks\" />
       <Folder Include="Ui\DebugWindowTabs\" />
     </ItemGroup>
     

@@ -2,7 +2,7 @@ using ECommons.EzIpcManager;
 
 #pragma warning disable CS8618
 
-namespace ExplorersIcebox.IPC
+namespace MiniPluginCollection.IPC
 {
     public class LifestreamIPC
     {

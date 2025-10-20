@@ -1,4 +1,4 @@
-namespace ExplorersIcebox.Enums
+namespace MiniPluginCollection.Enums
 {
     [Flags]
     internal enum IceBoxState

@@ -1,7 +1,7 @@
 using Dalamud.Plugin.Services;
-using ExplorersIcebox.Config;
+using MiniPluginCollection.Config;
 
-namespace ExplorersIcebox
+namespace MiniPluginCollection
 {
     internal class Service
     {

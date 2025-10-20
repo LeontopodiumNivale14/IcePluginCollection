@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace ExplorersIcebox.Config;
+namespace MiniPluginCollection.Config;
 
 public class GeneralConfig : IYamlConfig
 {
@@ -19,6 +19,6 @@ public class GeneralConfig : IYamlConfig
 
     // General Save
 
-    public static string ConfigPath => Path.Combine(Svc.PluginInterface.ConfigDirectory.FullName, "ExplorersConfig.yaml");
+    public static string ConfigPath => Path.Combine(Svc.PluginInterface.ConfigDirectory.FullName, "MiniPluginCollection.yaml");
     public void Save() => YamlConfig.Save(this, ConfigPath);
 }
