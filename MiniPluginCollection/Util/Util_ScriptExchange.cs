@@ -80,7 +80,6 @@ public class Util_ScriptExchange
         [44876] = ShopItem.Create("Sweet Dreamer's Stall", 500, ShopPages.OrangeScriptLv100),
 
         // 
-        []
     };
 
     // Gets the items via the page that I'm calling upon
