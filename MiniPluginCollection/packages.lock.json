@@ -14,12 +14,6 @@
         "resolved": "1.2.25",
         "contentHash": "xCXiw7BCxHJ8pF6wPepRUddlh2dlQlbr81gXA72hdk4FLHkKXas7EH/n+fk5UCA/YfMqG1Z6XaPiUjDbUNBUzg=="
       },
-      "ECommons": {
-        "type": "Direct",
-        "requested": "[3.0.1.22, )",
-        "resolved": "3.0.1.22",
-        "contentHash": "MT7fdS3XN0lDEPbCl9BQDS59XPDYDJd9XA6YACxMc0RAXFnDblOCU7WGtXBOkAQ4FLnZTAruwpQcnBJA2Pv31Q=="
-      },
       "Pictomancy": {
         "type": "Direct",
         "requested": "[0.0.1, )",

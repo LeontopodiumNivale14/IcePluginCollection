@@ -17,7 +17,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="ECommons" Version="3.0.1.22" />
         <PackageReference Include="Pictomancy" Version="0.0.1" />
         <PackageReference Include="YamlDotNet" Version="16.3.0" />
     </ItemGroup>
